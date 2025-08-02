@@ -6,7 +6,7 @@ branch_name=$(git symbolic-ref --short HEAD)
 pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)/[a-zA-Z0-9_-]+/[a-z0-9-]+$'
 
 # Allow main branch (and optionally develop) to bypass the check
-if [ "$branch_name" = "main" ] || [ "$branch_name" = "develop" ]; then
+if [ "$branch_name" = "main" ] || [ "$branch_name" = "develop" ] || [ "$branch_name" = "starter" ]; then
   exit 0
 fi
 
