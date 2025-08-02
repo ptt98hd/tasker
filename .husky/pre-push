@@ -1,0 +1,17 @@
+#!/bin/sh
+
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Regex for <type>/<contributor>/<short-description>
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)/[a-zA-Z0-9_-]+/[a-z0-9-]+$'
+
+# Allow main branch (and optionally develop) to bypass the check
+if [ "$branch_name" = "main" ] || [ "$branch_name" = "develop" ]; then
+  exit 0
+fi
+
+if ! echo "$branch_name" | grep -Eq "$pattern"; then
+  echo "\033[0;31m[Husky] ERROR: Branch name '$branch_name' does not follow the convention: <type>/<contributor>/<short-description>\033[0m"
+  echo "Example: feat/johndoe/user-profile-page"
+  exit 1
+fi

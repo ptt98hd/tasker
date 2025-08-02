@@ -1,5 +1,30 @@
 # Contributors Guide
 
+## Branch Naming Rules
+
+All branches must follow this format:
+
+```
+<type>/<contributor>/<short-description>
+```
+
+- `<type>`: The type of work (feat, fix, chore, docs, refactor, etc.)
+- `<contributor>`: Your GitHub username or team alias
+- `<short-description>`: A brief, hyphenated summary of the branch purpose (lowercase, no spaces)
+- Optionally, you can add the issue number at the start of the description (e.g., `feat/johndoe/42-user-profile-page`)
+- Do not use generic names like `dev`, `test`, or `update`
+
+**Examples:**
+
+- feat/johndoe/user-profile-page
+- fix/alice/login-error
+- chore/bob/update-deps
+- docs/team-docs/contributing-guide
+- refactor/johndoe/user-service
+- feat/johndoe/42-user-profile-page
+
+> The branch creator is responsible for keeping the branch up to date, code quality, and resolving all review comments until the branch is merged.
+
 ## Commit Rules
 
 This project enforces commit message rules using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). All commit messages must follow this format:
@@ -8,7 +33,7 @@ This project enforces commit message rules using [Conventional Commits](https://
 <type>(<optional-scope>): <description>
 ```
 
-**Allowed commit types:**
+**Allowed commit/branch types:**
 
 | Type     | Description                                                                       |
 | -------- | --------------------------------------------------------------------------------- |
