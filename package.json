@@ -5,6 +5,8 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -26,7 +28,7 @@
     "dev": "next dev --turbopack",
     "format": "prettier --write .",
     "lint": "next lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "next start"
   },
   "version": "0.1.0"
