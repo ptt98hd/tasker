@@ -1,1 +1,13 @@
-{}
+{
+  "nextjs": {
+    "deployNow": "Deploy now",
+    "footer": {
+      "examples": "Examples",
+      "goToNextjs": "Go to nextjs.org",
+      "learn": "Learn"
+    },
+    "getStarted": "Get started by editing",
+    "readDocs": "Read our docs",
+    "saveAndSee": "Save and see your changes instantly."
+  }
+}

@@ -1,19 +1,19 @@
 import '../globals.css';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Noto_Sans, Noto_Sans_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { ThemeProvider } from 'next-themes';
 
 import { routing } from '@/i18n/routing';
 
-const geistSans = Geist({
+const fontSans = Noto_Sans({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
+const fontMono = Noto_Sans_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
@@ -36,7 +36,7 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"

@@ -1,26 +1,29 @@
-import { AppWindowMac, FileText } from 'lucide-react';
+import { AppWindowMac, FileText, Globe } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
+import { LanguageToggle } from '@/components/language-toggle';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
+  const t = useTranslations('nextjs');
   const FOOTER_LINKS = [
     {
       href: 'https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app',
-      label: 'Learn',
+      label: t('footer.learn'),
       icon: FileText,
     },
     {
       href: 'https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app',
-      label: 'Examples',
+      label: t('footer.examples'),
       icon: AppWindowMac,
     },
     {
       href: 'https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app',
-      label: 'Go to nextjs.org',
-      icon: FileText, // Replace with Globe icon if available
+      label: t('footer.goToNextjs'),
+      icon: Globe,
     },
   ];
 
@@ -37,13 +40,13 @@ export default function Home() {
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
+            {t('getStarted')}{' '}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
               src/app/page.tsx
             </code>
             .
           </li>
-          <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
+          <li className="tracking-[-.01em]">{t('saveAndSee')}</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
@@ -59,7 +62,7 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              Deploy now
+              {t('deployNow')}
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
@@ -67,10 +70,11 @@ export default function Home() {
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               target="_blank"
             >
-              Read our docs
+              {t('readDocs')}
             </Link>
           </Button>
           <ThemeToggle />
+          <LanguageToggle />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
