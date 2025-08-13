@@ -1,13 +1,61 @@
 {
-  "nextjs": {
-    "deployNow": "Deploy now",
-    "footer": {
-      "examples": "Examples",
-      "goToNextjs": "Go to nextjs.org",
-      "learn": "Learn"
-    },
-    "getStarted": "Get started by editing",
-    "readDocs": "Read our docs",
-    "saveAndSee": "Save and see your changes instantly."
+  "locale": {
+    "guest": {
+      "layout": {
+        "header": {
+          "logo": "Tasker",
+          "login": "Log In",
+          "theme": "Theme",
+          "language": "Language"
+        },
+        "footer": {
+          "copyright": "Tasker. All rights reserved."
+        }
+      },
+      "page": {
+        "content": {
+          "getStarted": "Get started by editing",
+          "saveAndSee": "Save and see your changes instantly."
+        },
+        "action": {
+          "deployNow": "Deploy now",
+          "readDocs": "Read our docs"
+        },
+        "footer": {
+          "examples": "Examples",
+          "goToNextjs": "Go to nextjs.org",
+          "learn": "Learn"
+        }
+      },
+      "auth": {
+        "login": {
+          "welcome": {
+            "title": "Welcome back",
+            "description": "Login to your Tasker account"
+          },
+          "form": {
+            "email": {
+              "label": "Email",
+              "placeholder": "Enter your email"
+            },
+            "password": {
+              "label": "Password",
+              "placeholder": "Enter your password",
+              "forgot": "Forgot your password?"
+            },
+            "submit": "Log In"
+          },
+          "others": {
+            "login": "Or log in with",
+            "noAccount": "Don't have an account?",
+            "signup": "Sign up",
+            "agree": "By logging in, you agree to our",
+            "terms": "Terms of Service",
+            "and": "and",
+            "privacy": "Privacy Policy"
+          }
+        }
+      }
+    }
   }
 }

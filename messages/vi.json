@@ -1,13 +1,33 @@
 {
-  "nextjs": {
-    "deployNow": "Triển khai ngay",
-    "footer": {
-      "examples": "Ví dụ",
-      "goToNextjs": "Đến nextjs.org",
-      "learn": "Học"
-    },
-    "getStarted": "Bắt đầu bằng cách chỉnh sửa",
-    "readDocs": "Đọc tài liệu",
-    "saveAndSee": "Lưu và xem thay đổi ngay lập tức."
+  "locale": {
+    "guest": {
+      "layout": {
+        "header": {
+          "logo": "Tasker",
+          "login": "Đăng nhập",
+          "signup": "Đăng ký",
+          "theme": "Giao diện",
+          "language": "Ngôn ngữ"
+        },
+        "footer": {
+          "copyright": "Tasker. Đã đăng ký bản quyền."
+        }
+      },
+      "page": {
+        "content": {
+          "getStarted": "Bắt đầu bằng cách chỉnh sửa",
+          "saveAndSee": "Lưu và xem thay đổi của bạn ngay lập tức."
+        },
+        "action": {
+          "deployNow": "Triển khai ngay",
+          "readDocs": "Đọc tài liệu của chúng tôi"
+        },
+        "footer": {
+          "examples": "Ví dụ",
+          "goToNextjs": "Đi tới nextjs.org",
+          "learn": "Tài liệu"
+        }
+      }
+    }
   }
 }

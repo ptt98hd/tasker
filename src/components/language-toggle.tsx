@@ -38,12 +38,12 @@ export function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="lg" disabled={isPending}>
+        <Button variant="ghost" size="icon" disabled={isPending}>
           <Globe className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Toggle language</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="mt-4">
         {locales.map((locale) => (
           <DropdownMenuItem key={locale.code} onClick={() => handleChange(locale.code)}>
             {locale.label}
