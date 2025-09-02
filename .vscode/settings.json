@@ -8,10 +8,7 @@
   "eslint.format.enable": true,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "i18n-ally.localesPaths": [
-    "messages",
-    "src/i18n"
-  ],
+  "i18n-ally.localesPaths": ["messages", "src/i18n"],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

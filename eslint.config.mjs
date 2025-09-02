@@ -11,6 +11,9 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: ['src/generated/**'],
+  },
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   {
     plugins: {
@@ -22,14 +25,7 @@ const eslintConfig = [
       'simple-import-sort/imports': [
         'error',
         {
-          groups: [
-            // Side effect imports (e.g. CSS)
-            ['^\u0000'],
-            // Packages. "^" matches any package (node_modules)
-            ['^node:', '^[a-zA-Z]'],
-            // Internal modules (user code)
-            ['^'],
-          ],
+          groups: [['^\u0000'], ['^node:', '^[a-zA-Z]'], ['^']],
         },
       ],
       'simple-import-sort/exports': 'error',
