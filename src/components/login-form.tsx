@@ -1,3 +1,4 @@
+import { Eye, EyeClosed } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -20,8 +21,9 @@ export interface LoginFormProps extends React.ComponentProps<'div'> {
 
 export function LoginForm({ className, onLogin, ...props }: LoginFormProps) {
   const t = useTranslations('locale.guest.auth.login');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props} onSubmit={() => {}}>
@@ -51,14 +53,26 @@ export function LoginForm({ className, onLogin, ...props }: LoginFormProps) {
                     {t('form.password.forgot')}
                   </a>
                 </div>
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder={t('form.password.placeholder')}
-                  required
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder={t('form.password.placeholder')}
+                    required
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                  />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-0 top-1/2 -translate-y-1/2"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    tabIndex={-1}
+                  >
+                    {showPassword ? <Eye /> : <EyeClosed />}
+                  </Button>
+                </div>
               </div>
               <Button type="button" className="w-full" onClick={() => onLogin({ email, password })}>
                 {t('form.submit')}
